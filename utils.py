@@ -12,7 +12,9 @@ UTILS
 import pandas as pd
 import numpy as np
 
-movies = pd.read_csv('data/movies.csv') 
+movies = pd.read_csv('data/movies.csv', index_col=0)
+movie_ratings = pd.read_csv('data/movie_ratings.csv', index_col=0)
+titles= movie_ratings.columns.to_list() 
 
 def movie_to_id(string_titles):
     '''
